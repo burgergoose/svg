@@ -62,7 +62,10 @@ async function setup() {
   // window.V3: when set, the transport library's own files live in a different repo.
   const engine = window.V3 || '';
   const asset = (p) => (engine ? engine + p : new URL(p, location.href).pathname);
-  const connection = new BareMux.BareMuxConnection(asset('transport/worker.js'));
+  // SharedWorker scripts must be same-origin (no CORS exception exists for it, unlike a
+  // plain Worker or importScripts), so this always points at the local stub in a/worker.js,
+  // which importScripts()'s the real one - same pattern as a/sw.js does for uv.bundle.js.
+  const connection = new BareMux.BareMuxConnection(new URL('a/worker.js', location.href).pathname);
   await connection.setTransport(asset('networking/index.mjs'), [{ wisp: connUrl() }]);
 }
 
