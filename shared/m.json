@@ -1,11 +1,10 @@
 {
   "load": [
     "https://cdn.jsdelivr.net/gh/burgergoose/engine@main/core/uv.bundle.js",
-    "/burgergoose/svg/main/v0003/a/uv.config.js",
+    "a/uv.config.js",
     "https://cdn.jsdelivr.net/gh/burgergoose/engine@main/transport/index.js",
     "https://raw.githack.com/burgergoose/script/main/lib.js",
     "config.js",
-    "core/api.js",
-    "core/inject.js"
+    "achroma.js"
   ]
 }
