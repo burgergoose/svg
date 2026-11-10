@@ -1,0 +1,11 @@
+/*global Ultraviolet*/
+self.__uv$config = {
+  prefix: '/burgergoose/svg/main/v0003/a/service/',
+  encodeUrl: Ultraviolet.codec.xor.encode,
+  decodeUrl: Ultraviolet.codec.xor.decode,
+  handler: 'https://cdn.jsdelivr.net/gh/burgergoose/engine@main/controller/uv.handler.js',
+  client: 'https://cdn.jsdelivr.net/gh/burgergoose/engine@main/controller/uv.client.js',
+  bundle: 'https://cdn.jsdelivr.net/gh/burgergoose/engine@main/core/uv.bundle.js',
+  config: '/burgergoose/svg/main/v0003/a/uv.config.js',
+  sw: 'https://cdn.jsdelivr.net/gh/burgergoose/engine@main/core/uv.sw.js',
+};
