@@ -1,2 +1,1 @@
-window.V2 = '9433289534';
-window.V3 = 'https://cdn.jsdelivr.net/gh/burgergoose/engine@main/';
+window.V2="2561481305",window.V3="https://cdn.jsdelivr.net/gh/burgergoose/engine@main/";

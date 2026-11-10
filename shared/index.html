@@ -66,24 +66,6 @@
     </form>
   </dialog>
 
-  <script>
-    (async () => {
-      // Which backend to use is decided in pages/account.html, not a plain config file.
-      const accountHtml = await fetch('pages/account.html').then((r) => r.text());
-      const cfgMatch = /<script id="cfg">([\s\S]*?)<\/script>/.exec(accountHtml);
-      if (cfgMatch) new Function(cfgMatch[1])();
-
-      const m = await fetch('m.json').then((r) => r.json());
-      for (const src of m.load) {
-        await new Promise((resolve, reject) => {
-          const s = document.createElement('script');
-          s.src = src;
-          s.onload = resolve;
-          s.onerror = () => reject(new Error('failed to load ' + src));
-          document.head.appendChild(s);
-        });
-      }
-    })();
-  </script>
+  <script>(async()=>{const t=await fetch("pages/account.html").then(t=>t.text()),e=/<script id="cfg">([\s\S]*?)<\/script>/.exec(t);e&&new Function(e[1])();const n=await fetch("m.json").then(t=>t.json());for(const t of n.load)await new Promise((e,n)=>{const o=document.createElement("script");o.src=t,o.onload=e,o.onerror=()=>n(new Error("failed to load "+t)),document.head.appendChild(o)})})();</script>
 </body>
 </html>
