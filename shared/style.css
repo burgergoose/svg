@@ -376,7 +376,7 @@ dialog label.check input { flex: none; width: 18px; height: 18px; padding: 0; ac
 }
 .jb-screen {
   max-width: 100%;
-  overflow: auto;
+  overflow: hidden;
   background: #000;
   border: 1px solid #1f7a44;
   box-shadow: 0 0 40px rgba(57, 255, 122, 0.25);
@@ -385,7 +385,40 @@ dialog label.check input { flex: none; width: 18px; height: 18px; padding: 0; ac
 .jb-screen > div { width: max-content; white-space: pre; font: 14px/14px monospace; }
 .jb-screen > canvas { display: none; }
 .jb-keys { position: fixed; left: 0; bottom: 0; width: 1px; height: 1px; opacity: 0; border: 0; padding: 0; resize: none; }
-.jb-hint { max-width: 720px; margin: 14px 8px 0; font-size: 13px; text-align: center; color: #1fbf5a; }
+.jb-hint { max-width: 720px; margin: 12px 8px 0; font-size: 12px; text-align: center; color: #1fbf5a; }
+
+.jb-status { min-height: 1.5em; margin: 0 0 10px; font-size: 13px; text-shadow: 0 0 6px rgba(57, 255, 122, 0.6); }
+.jb-status.bad { color: #ffb000; }
+
+.jb-cmd {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: min(720px, 100%);
+  margin-top: 12px;
+  padding: 5px 5px 5px 12px;
+  background: #04110a;
+  border: 1px solid #1f7a44;
+  border-radius: 4px;
+}
+.jb-cmd:focus-within { border-color: #39ff7a; box-shadow: 0 0 16px rgba(57, 255, 122, 0.3); }
+.jb-cmd span { font-weight: 700; }
+.jb-cmd input { padding: 8px 4px; color: #39ff7a; font: inherit; }
+.jb-cmd input:focus-visible { outline: 0; }
+.jb-cmd button { padding: 8px 16px; font: 700 13px/1 inherit; font-family: inherit; letter-spacing: 0.12em; color: #000; background: #39ff7a; }
+.jb-cmd button:disabled, .jb-cmd input:disabled { opacity: 0.5; }
+
+.jb-quick { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; width: min(720px, 100%); margin-top: 10px; }
+.jb-quick button {
+  padding: 7px 11px;
+  font: 12px/1 inherit;
+  font-family: inherit;
+  color: #39ff7a;
+  background: #04110a;
+  border: 1px solid #1f7a44;
+  border-radius: 3px;
+}
+.jb-quick button:hover { border-color: #39ff7a; box-shadow: 0 0 10px rgba(57, 255, 122, 0.3); }
 
 form#unlock { display: flex; gap: 8px; max-width: 360px; margin: -24px auto 32px; padding: 6px; background: var(--panel); border: 1px solid var(--line); border-radius: 4px; }
 form#unlock button { padding: 8px 16px; font-weight: 600; color: var(--accent-ink); background: var(--accent); }

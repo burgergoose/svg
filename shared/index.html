@@ -37,10 +37,28 @@
       <button id="jb-go" class="jb-go" type="button" hidden>ACTIVATE JAILBREAK</button>
     </div>
     <div id="jb-vm" class="jb-vm" hidden>
+      <p id="jb-status" class="jb-status" role="status"></p>
       <div id="jb-screen" class="jb-screen"><div></div><canvas></canvas></div>
       <textarea id="jb-keys" class="phone_keyboard jb-keys" aria-label="Keyboard for the mini computer"
                 autocapitalize="off" autocomplete="off" spellcheck="false"></textarea>
-      <p class="jb-hint">Tap or click the screen, then type. It runs in your own browser - nothing is saved when you exit.</p>
+      <form id="jb-cmd" class="jb-cmd" autocomplete="off">
+        <span aria-hidden="true">$</span>
+        <input id="jb-cmd-in" type="text" placeholder="starting up..." disabled
+               spellcheck="false" autocapitalize="off" aria-label="Command">
+        <button type="submit">RUN</button>
+      </form>
+      <div class="jb-quick" aria-label="Quick commands">
+        <button type="button" data-cmd="help">help</button>
+        <button type="button" data-fill="web ">search the web</button>
+        <button type="button" data-cmd="web en.wikipedia.org/wiki/Special:Random">random article</button>
+        <button type="button" data-cmd="ls -la">my files</button>
+        <button type="button" data-cmd="clear">clear</button>
+        <button type="button" data-key="pgup" title="Scroll up (Page Up)">&#9650; up</button>
+        <button type="button" data-key="pgdn" title="Scroll down (Page Down)">&#9660; down</button>
+        <button type="button" data-key="q" title="Close the page you're reading">q close</button>
+        <button type="button" data-key="ctrlc" title="Stop the running command (Ctrl+C)">stop</button>
+      </div>
+      <p class="jb-hint">Type in the box above, or tap the screen and type directly. Runs in your own browser - nothing is saved when you exit.</p>
     </div>
   </section>
 
