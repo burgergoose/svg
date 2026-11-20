@@ -35,6 +35,10 @@
     <div id="jb-intro" class="jb-intro">
       <pre id="jb-log" class="jb-log" aria-live="polite"></pre>
       <button id="jb-go" class="jb-go" type="button" hidden>ACTIVATE JAILBREAK</button>
+      <div id="jb-pick" class="jb-pick" hidden>
+        <button type="button" data-os="desktop">DESKTOP<small>windows, mouse, games and apps</small></button>
+        <button type="button" data-os="terminal">TERMINAL<small>linux command line with internet</small></button>
+      </div>
     </div>
     <div id="jb-vm" class="jb-vm" hidden>
       <p id="jb-status" class="jb-status" role="status"></p>
@@ -58,7 +62,7 @@
         <button type="button" data-key="q" title="Close the page you're reading">q close</button>
         <button type="button" data-key="ctrlc" title="Stop the running command (Ctrl+C)">stop</button>
       </div>
-      <p class="jb-hint">Type in the box above, or tap the screen and type directly. Runs in your own browser - nothing is saved when you exit.</p>
+      <p id="jb-hint" class="jb-hint"></p>
     </div>
   </section>
 
