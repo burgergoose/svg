@@ -25,7 +25,23 @@
     </form>
 
     <div id="shortcuts" class="shortcuts" aria-label="Shortcuts"></div>
+    <button id="jb-btn" class="jb-btn" type="button">JAILBREAK</button>
   </main>
+
+  <section id="jb" hidden aria-label="Jailbreak">
+    <canvas id="jb-rain" aria-hidden="true"></canvas>
+    <button id="jb-exit" class="jb-exit" type="button">[ EXIT ]</button>
+    <div id="jb-intro" class="jb-intro">
+      <pre id="jb-log" class="jb-log" aria-live="polite"></pre>
+      <button id="jb-go" class="jb-go" type="button" hidden>ACTIVATE JAILBREAK</button>
+    </div>
+    <div id="jb-vm" class="jb-vm" hidden>
+      <div id="jb-screen" class="jb-screen"><div></div><canvas></canvas></div>
+      <textarea id="jb-keys" class="phone_keyboard jb-keys" aria-label="Keyboard for the mini computer"
+                autocapitalize="off" autocomplete="off" spellcheck="false"></textarea>
+      <p class="jb-hint">Tap or click the screen, then type. It runs in your own browser - nothing is saved when you exit.</p>
+    </div>
+  </section>
 
   <div id="browser" hidden>
     <nav>

@@ -232,5 +232,98 @@ dialog label.check input { flex: none; width: 18px; height: 18px; padding: 0; ac
   background: var(--accent);
 }
 
+/* jailbreak: button, hacker screen, mini computer */
+.jb-btn {
+  display: block;
+  margin: 0 auto 28px;
+  padding: 12px 28px;
+  font: 700 15px/1 ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  letter-spacing: 0.3em;
+  color: #39ff7a;
+  background: #04110a;
+  border: 1px solid #1f7a44;
+  border-radius: 10px;
+  text-shadow: 0 0 8px rgba(57, 255, 122, 0.7);
+  box-shadow: 0 0 18px rgba(57, 255, 122, 0.15), inset 0 0 12px rgba(57, 255, 122, 0.08);
+}
+.jb-btn:hover { border-color: #39ff7a; box-shadow: 0 0 26px rgba(57, 255, 122, 0.35), inset 0 0 12px rgba(57, 255, 122, 0.15); }
+
+#jb {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  overflow: auto;
+  color: #39ff7a;
+  background: #000;
+  font: 15px/1.5 ui-monospace, 'Cascadia Mono', Consolas, monospace;
+}
+#jb-rain { position: fixed; inset: 0; width: 100%; height: 100%; opacity: 0.35; }
+
+.jb-exit {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  padding: 6px 12px;
+  font: inherit;
+  font-size: 13px;
+  color: #39ff7a;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #1f7a44;
+}
+.jb-exit:hover { border-color: #39ff7a; }
+
+.jb-intro {
+  position: relative;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 14vh 16px 48px;
+}
+.jb-log {
+  min-height: 12em;
+  margin: 0 0 28px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font: inherit;
+  text-shadow: 0 0 6px rgba(57, 255, 122, 0.6);
+}
+.jb-log .bad { color: #ff5f5f; text-shadow: 0 0 6px rgba(255, 95, 95, 0.6); }
+.jb-log .big { font-size: 1.6em; font-weight: 700; letter-spacing: 0.15em; }
+
+.jb-go {
+  display: block;
+  width: 100%;
+  padding: 18px;
+  font: 700 20px/1 ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  letter-spacing: 0.25em;
+  color: #000;
+  background: #39ff7a;
+  border-radius: 6px;
+  box-shadow: 0 0 30px rgba(57, 255, 122, 0.55);
+  animation: jb-pulse 1.4s ease-in-out infinite;
+}
+@keyframes jb-pulse { 50% { box-shadow: 0 0 60px rgba(57, 255, 122, 0.9); } }
+@media (prefers-reduced-motion: reduce) { .jb-go { animation: none; } }
+
+.jb-vm {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 56px 8px 24px;
+}
+.jb-screen {
+  max-width: 100%;
+  overflow: auto;
+  background: #000;
+  border: 1px solid #1f7a44;
+  box-shadow: 0 0 40px rgba(57, 255, 122, 0.25);
+  cursor: text;
+}
+.jb-screen > div { width: max-content; white-space: pre; font: 14px/14px monospace; }
+.jb-screen > canvas { display: none; }
+.jb-keys { position: fixed; left: 0; bottom: 0; width: 1px; height: 1px; opacity: 0; border: 0; padding: 0; resize: none; }
+.jb-hint { max-width: 720px; margin: 14px 8px 0; font-size: 13px; text-align: center; color: #1fbf5a; }
+
 form#unlock { display: flex; gap: 8px; max-width: 360px; margin: -24px auto 32px; padding: 6px; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; }
 form#unlock button { padding: 8px 16px; font-weight: 600; color: var(--accent-ink); background: var(--accent); }
