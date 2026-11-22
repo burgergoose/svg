@@ -64,6 +64,19 @@
         <span>Block ads</span>
       </label>
 
+      <label for="set-cloak">Tab disguise</label>
+      <div class="cloak-row">
+        <input id="set-cloak" type="text" placeholder="a website, e.g. google.com" spellcheck="false"
+               autocapitalize="off" autocomplete="off">
+        <button type="button" id="cloak-apply">Apply</button>
+      </div>
+      <label class="check">
+        <input id="set-cloak-name" type="checkbox">
+        <span>Use that site's name too</span>
+      </label>
+      <p id="cloak-msg" class="cloak-msg" role="status"></p>
+      <button type="button" id="cloak-reset" class="cloak-reset" hidden>Remove disguise</button>
+
       <button type="submit" class="primary">Done</button>
     </form>
   </dialog>

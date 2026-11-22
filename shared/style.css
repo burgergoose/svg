@@ -281,6 +281,12 @@ select {
 .swatches button[aria-checked='true'] { border-color: var(--text); box-shadow: 0 0 12px var(--glow); }
 
 dialog label.check { display: flex; align-items: center; gap: 10px; margin-top: 18px; color: var(--text); }
+.cloak-row { display: flex; gap: 8px; }
+.cloak-row button, .cloak-reset { padding: 9px 14px; font-weight: 700; color: var(--accent-ink); background: var(--accent); }
+.cloak-reset { margin-top: 8px; color: var(--text); background: transparent; border: 1px solid var(--line); }
+.cloak-reset:hover { border-color: var(--accent); color: var(--accent); }
+.cloak-msg { min-height: 18px; margin: 10px 0 0; font-size: 12px; color: var(--muted); }
+.cloak-msg.bad { color: #ff5f5f; }
 dialog label.check input { flex: none; width: 18px; height: 18px; padding: 0; accent-color: var(--accent); }
 
 .primary {
