@@ -1,3 +1,0 @@
-kolibri.img - KolibriOS (https://kolibrios.org), free software under the GNU GPL v2.
-linux4.iso - Linux/Buildroot image from the v86 project (GPL).
-libv86.js, v86.wasm - v86 emulator, see LICENSE-v86.txt.
