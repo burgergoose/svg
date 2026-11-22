@@ -1,0 +1,47 @@
+{
+  "maintenance": {
+    "on": false,
+    "title": "Veil is currently under maintenance.",
+    "message": "We're making improvements. Veil will be back shortly.",
+    "eta": "",
+    "since": ""
+  },
+  "posts": [
+    {
+      "id": "a1c0de01",
+      "type": "patch",
+      "title": "Veil 3.0: pick your engine",
+      "version": "v3.0",
+      "body": "Veil now has two engines and a new welcome screen.\n- SCRAMJET: the newer engine, built for modern sites (ChatGPT's page now works with it)\n- ULTRAVIOLET: the classic engine, still available\n- Switch any time from Settings or the engine button on the home screen\n- New Inbox (this page) for update notes",
+      "date": "2026-11-22T14:00:00.000Z",
+      "pinned": true
+    },
+    {
+      "id": "a1c0de02",
+      "type": "update",
+      "title": "Tab disguise",
+      "version": "v2.9",
+      "body": "Make your browser tab look like another site.\n- Settings > Tab disguise: type a site, press Apply\n- Optional: use that site's name too\n- The icon is fetched privately through Veil's tunnel",
+      "date": "2026-11-22T12:00:00.000Z",
+      "pinned": false
+    },
+    {
+      "id": "a1c0de03",
+      "type": "update",
+      "title": "AI button",
+      "version": "v2.8",
+      "body": "A new AI button on the home screen opens a free AI chat (no login) through Veil.",
+      "date": "2026-11-22T10:00:00.000Z",
+      "pinned": false
+    },
+    {
+      "id": "a1c0de04",
+      "type": "fix",
+      "title": "Fixes for browser storage errors",
+      "version": "v2.7",
+      "body": "- Fixed the \"CacheStorage\" error some browsers showed on start\n- Fixed the \"service worker aborted\" error: Veil now retries and explains what to do\n- Fixed the tab disguise crashing on the mirror pages",
+      "date": "2026-11-22T08:00:00.000Z",
+      "pinned": false
+    }
+  ]
+}
